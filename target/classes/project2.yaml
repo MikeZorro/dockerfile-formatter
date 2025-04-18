@@ -1,0 +1,3 @@
+---
+name: TestService
+startup_command: rails console
