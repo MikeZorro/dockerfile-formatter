@@ -21,7 +21,7 @@ public class YamlDataReader {
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
-            String key = "N/A";
+            String key = null;
             String value = "N/A";
             while ((line = reader.readLine()) != null) {
                 line = line.strip();
@@ -37,6 +37,10 @@ public class YamlDataReader {
                     String[] parts = line.split(":", 2);
                     value = parts[1].strip();
                 }
+            }
+            if(key == null) {
+                System.err.println("project file invalid");
+                return;
             }
             data.put(key, value);
         } catch (IOException e) {
