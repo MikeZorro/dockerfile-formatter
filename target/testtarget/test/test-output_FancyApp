@@ -3,4 +3,4 @@ LABEL maintainer="John Doe"
 WORKDIR /app
 COPY . /app
 RUN bundle install
-CMD ["<startup_command>"] # Startup command for <name>.
+CMD ["<command>"] # Startup command for FancyApp.
