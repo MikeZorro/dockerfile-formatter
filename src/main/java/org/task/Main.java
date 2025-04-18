@@ -15,8 +15,8 @@ public class Main {
         //Task 2
         String templatePath = "src/main/resources/templates/ruby-template.yaml";
         String templatePath2 = "src/main/resources/templates/ruby-template-new.yaml";
-        String outputPath = "src/main/resources/output/test";
-        String outputPath2 = "src/main/resources/output/test2";
+        String outputPath = "target/output/test1";
+        String outputPath2 = "target/output/test2";
 
         DockerfileGenerator dockerfileGenerator = new DockerfileGenerator(yamlDataReader);
         dockerfileGenerator.generateDockerfile( "MyAwesomeService", templatePath, outputPath);
